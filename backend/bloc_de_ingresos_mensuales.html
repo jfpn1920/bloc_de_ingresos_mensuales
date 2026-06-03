@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bloc_de_ingresos_mensuales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="bloc_de_ingresos_mensuales.js" defer></script>
+</head>
+<body>
+    <!---------------------------------------------->
+    <!--|estructurando_bloc_de_ingresos_mensuales|-->
+    <!---------------------------------------------->
+    <div class="bloc_ingresos">
+        <div class="titulo_bloc">
+            Bloc de ingresos mensuales
+        </div>
+        <label>
+            Colocar la fecha de creación
+        </label>
+        <div class="contenedor_fecha">
+            <i class="fa-solid fa-calendar-days boton_calendario"></i>
+            <input
+                type="date"
+                id="fecha_creacion"
+            >
+        </div>
+        <label>
+            Has una descripción
+        </label>
+        <textarea
+            id="descripcion"
+            placeholder="Añade la descripción..."
+        ></textarea>
+        <label>
+            Seleccionar la categoría
+        </label>
+        <select id="categoria">
+            <option
+                value=""
+                selected
+            >
+                Ninguna categoría...
+            </option>
+            <option>
+                Salario
+            </option>
+            <option>
+                Ventas
+            </option>
+            <option>
+                Inversiones
+            </option>
+            <option>
+                Otros
+            </option>
+        </select>
+        <label>
+            Agregar el monto
+        </label>
+        <input
+            type="number"
+            id="monto"
+            placeholder="Añade el monto..."
+        >
+        <button
+            class="boton_agregar"
+            id="boton_agregar"
+        >
+            Agregar ingreso
+        </button>
+    </div>
+    <!--------------------------------------->
+    <!--|estructurando_resumen_de_ingresos|-->
+    <!--------------------------------------->
+    <div class="panel_estadisticas">
+        <div class="tarjeta_estadistica">
+            <div class="titulo_estadistica">
+                Total del mes
+            </div>
+            <div
+                class="valor_estadistica"
+                id="total_mes"
+            >
+                0
+            </div>
+        </div>
+        <div class="tarjeta_estadistica">
+            <div class="titulo_estadistica">
+                Registrados
+            </div>
+            <div
+                class="valor_estadistica"
+                id="total_registrados"
+            >
+                0
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------>
+    <!--|estructurando_tablero_de_ingreso_mensuales|-->
+    <!------------------------------------------------>
+    <div class="tablero_ingresos">
+        <div class="titulo_tablero">
+            Tablero de ingresos mensuales
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Descripcion</th>
+                    <th>Categorias</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="contenedor_tabla">
+            </tbody>
+        </table>
+        <div
+            class="contenido_tablero"
+            id="mensaje_vacio"
+        >
+            <p>
+                Ningún ingreso añadido en el tablero
+            </p>
+        </div>
+    </div>
+</body>
+</html>

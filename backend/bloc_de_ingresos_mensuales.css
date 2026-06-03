@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+body{
+    background:#ffffff;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+/*------------------------------*/
+/*--|estilo_base_presentacion|--*/
+/*------------------------------*/
+.contenedor_presentacion_bloc_de_notas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.tarjeta_presentacion_bloc_de_notas{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.imagen_presentacion_bloc_de_notas{
+    width: 290px;
+    height: 399px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.titulo_presentacion_bloc_de_notas{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+}
+.subtitulo_presentacion_bloc_de_notas{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -30px;
+    color: #000000;
+}
+.boton_presentacion_bloc_de_notas{
+    text-decoration: none;
+    background: linear-gradient(
+        to bottom,
+        #bfc5d1,
+        #555b69
+    );
+    color: #000000;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: -15px;
+    padding: 15px 35px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.boton_presentacion_bloc_de_notas:hover{
+    transform: scale(1.05);
+}
+/*--------------------------------------------*/
+/*--|estilo_base_bloc_de_ingresos_mensuales|--*/
+/*--------------------------------------------*/
+.bloc_ingresos{
+    margin-top: 10px;
+    margin-left: 10px;
+    width:250px;
+    background:#d3d3d3;
+    border:1px solid #888;
+}
+.titulo_bloc{
+    background:#6f92c5;
+    color:#111;
+    text-align:center;
+    font-weight:bold;
+    padding:8px;
+    border-bottom:1px solid #777;
+}
+.bloc_ingresos label{
+    display:block;
+    font-size:16px;
+    margin:12px 12px 8px;
+}
+.bloc_ingresos input,
+.bloc_ingresos textarea,
+.bloc_ingresos select{
+    width:calc(100% - 24px);
+    margin:0 12px;
+    padding:8px;
+    border:1px solid #9a9a9a;
+    outline:none;
+}
+.bloc_ingresos textarea{
+    resize:none;
+    height: 30px;
+}
+.contenedor_fecha{
+    display:flex;
+    gap:8px;
+    margin:0 12px;
+}
+.boton_calendario{
+    width:30px;
+    height:30px;
+    position:relative;
+    font-size: 26px;
+    left: 5px;
+    top: 5px;
+    border:none;
+    color:#000000;
+    cursor:pointer;
+}
+.contenedor_fecha input{
+    margin:0;
+    flex:1;
+}
+.boton_agregar{
+    display:block;
+    width:140px;
+    margin:18px auto;
+    padding:10px;
+    border:none;
+    background:#5f82b8;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+}
+.boton_agregar:hover{
+    opacity:0.9;
+}
+/*-------------------------------------*/
+/*--|estilo_base_resumen_de_ingresos|--*/
+/*-------------------------------------*/
+.panel_estadisticas{
+    display:flex;
+    margin-top: 10px;
+    margin-left: 10px;
+    flex-direction:column;
+    gap: 10px;
+    width:250px;
+}
+.tarjeta_estadistica{
+    background:#d3d3d3;
+    border:1px solid #7f7f7f;
+}
+.titulo_estadistica{
+    background:#6f92c5;
+    text-align:center;
+    font-weight:bold;
+    padding:5px;
+    border-bottom:1px solid #7f7f7f;
+}
+.valor_estadistica{
+    height:150px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:90px;
+    font-weight:normal;
+}
+/*----------------------------------------------*/
+/*--|estilo_base_tablero_de_ingreso_mensuales|--*/
+/*----------------------------------------------*/
+.tablero_ingresos{
+    margin-top:-779px;
+    margin-left:268px;
+    width:80.6%;
+    min-height: 779px;
+    border:1px solid #7b7b7b;
+    background:#d3d3d3;
+}
+.titulo_tablero{
+    background:#7295c8;
+    text-align:center;
+    font-weight:bold;
+    color:#222;
+    padding:6px;
+    border-bottom:1px solid #7b7b7b;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:auto;
+}
+th{
+    background:#d3d3d3;
+    border-right:1px solid #7b7b7b;
+    border-bottom:1px solid #7b7b7b;
+    padding:8px;
+    text-align:center;
+}
+th:last-child{
+    border-right:none;
+}
+td{
+    padding:8px;
+    height: 35.5px;
+    text-align:center;
+    border-right:1px solid #7b7b7b;
+    border-bottom:1px solid #7b7b7b;
+    background:#d3d3d3;
+}
+td:last-child{
+    border-right:none;
+}
+.contenido_tablero{
+    height:653px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.contenido_tablero p{
+    font-size:16px;
+    font-weight:bold;
+    color:#333;
+}
+.boton_vista_previa,
+.boton_editar,
+.boton_eliminar{
+    margin:0 10px;
+    cursor:pointer;
+}
+.columna_numero{
+    width:40px;
+}
+.columna_descripcion{
+    width:215px;
+}
+.columna_categoria{
+    width:250px;
+}
+.columna_monto{
+    width:180px;
+}
+.columna_fecha{
+    width:180px;
+}
+.columna_acciones{
+    width:190px;
+}
